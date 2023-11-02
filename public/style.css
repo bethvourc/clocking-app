@@ -1,3 +1,13 @@
+/* Add hover effect to buttons */
+#clockInBtn:hover {
+  background-color: #2189b8; /* New background color on hover */
+}
+
+#clockOutBtn:hover {
+  background-color: #c33a2f; /* New background color on hover */
+}
+
+/* Rest of your existing CSS */
 body {
   font-family: Arial, sans-serif;
   padding: 0;
@@ -63,4 +73,5 @@ button {
   margin-top: 20px;
   font-weight: bold;
 }
+
 

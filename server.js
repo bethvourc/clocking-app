@@ -8,7 +8,7 @@ app.use(express.json());
 
 app.post('/clocking', (req, res) => {
     const { name, action } = req.body;
-    const currentTime = new Date().toISOString();
+    const currentTime = new Date().toLocaleString(); // Format the time as a human-readable string
 
     fs.readFile('./data/timesheets.json', (err, data) => {
         if (err) throw err;
