@@ -7,14 +7,14 @@ document.addEventListener('DOMContentLoaded', function() {
   clockInBtn.addEventListener('click', function() {
       const name = nameInput.value;
       if(name) {
-          sendData({ name, action: 'clock_in' });
+          sendData({ name, action: 'sign_in' });
       }
   });
 
   clockOutBtn.addEventListener('click', function() {
       const name = nameInput.value;
       if(name) {
-          sendData({ name, action: 'clock_out' });
+          sendData({ name, action: 'sign_out' });
       }
   });
 

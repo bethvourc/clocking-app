@@ -14,9 +14,9 @@ app.post('/clocking', (req, res) => {
         if (err) throw err;
         let timesheets = JSON.parse(data);
 
-        if(action === 'clock_in') {
+        if(action === 'sign_in') {
             timesheets[name] = { ...timesheets[name], clockIn: currentTime };
-        } else if(action === 'clock_out') {
+        } else if(action === 'sign_out') {
             timesheets[name] = { ...timesheets[name], clockOut: currentTime };
         }
 
