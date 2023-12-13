@@ -2,6 +2,7 @@ const express = require('express');
 const fs = require('fs');
 const app = express();
 const PORT = 3000;
+const {exec} = require('child_process');
 
 app.use(express.static('public'));
 app.use(express.json());
@@ -24,7 +25,7 @@ app.post('/clocking', (req, res) => {
             if (err) throw err;
             res.json({ message: `Successfully recorded ${action.replace('_', ' ')} for ${name} at ${currentTime}` });
 
-            exec('python /path/to/json_to_excel.py', (error, stdout, stderr) => {
+            exec('python3 ./data/json_to_excel.py', (error, stdout, stderr) => {
                 if (error) {
                     console.error(`Error executing Python script: ${error}`);
                 }
