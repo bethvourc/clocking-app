@@ -1,6 +1,3 @@
-# clocking-app
-Certainly! Here's a sample README for your clocking application project:
-
 # Clocking Application
 
 The Clocking Application is a simple web-based tool that allows users to clock in and out, recording their working hours. This README provides an overview of the project, its features, and instructions for getting it up and running.
