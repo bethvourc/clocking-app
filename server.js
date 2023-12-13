@@ -23,6 +23,12 @@ app.post('/clocking', (req, res) => {
         fs.writeFile('./data/timesheets.json', JSON.stringify(timesheets), (err) => {
             if (err) throw err;
             res.json({ message: `Successfully recorded ${action.replace('_', ' ')} for ${name} at ${currentTime}` });
+
+            exec('python /path/to/json_to_excel.py', (error, stdout, stderr) => {
+                if (error) {
+                    console.error(`Error executing Python script: ${error}`);
+                }
+            });
         });
     });
 });
